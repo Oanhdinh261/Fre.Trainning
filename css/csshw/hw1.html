@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Download UI</title>
+    <style>
+        /* General Styles */
+        body {
+            background-color: black;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Phone Background */
+        .phone-background {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Download Information */
+        .download-info {
+            display: flex;
+            align-items: center; /* Ensures vertical alignment of items */
+            justify-content: space-between; /* Spaces items evenly */
+            gap: 10px; /* Provides consistent spacing between items */
+            position: absolute;
+            left: 50%;
+            top: 70%;
+            transform: translate(-50%, -50%);
+            border: 2px solid dimgrey;
+            border-radius: 10px;
+            width: 400px; /* Set a consistent width */
+            height: 100px; /* Set a consistent height */
+            background-color: black;
+            padding: 0.5rem;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Add subtle shadow for depth */
+        }
+
+        /* Thumbnail Image */
+        .thumbnail {
+            width: 100px; /* Constrain thumbnail width */
+            height: 100px; /* Constrain thumbnail height */
+            object-fit: contain;
+            margin-left: 0.1rem; /* Adds spacing to the left */
+        }
+
+        /* Text Container */
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centers text vertically */
+            gap: 0.3rem; /* Adds spacing between title and status */
+            flex-grow: 1; /* Ensures it takes up available space */
+            margin-left: 1rem;
+        }
+
+        .title {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .status {
+            color: dodgerblue;
+            font-size: 1.2rem;
+        }
+
+        /* Download Icon */
+        .download-icon {
+            width: 40px; /* Constrain icon size */
+            height: 40px;
+            object-fit: contain; /* Ensures proper scaling */
+            margin-right: 1rem; /* Adds spacing to the right */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Phone Background -->
+    <img src="backgroundimg.jpg" alt="Phone Background" class="phone-background">
+
+    <!-- Download Information Overlay -->
+    <div class="download-info">
+        <!-- Thumbnail Image -->
+        <img src="picindialog.png" alt="Stranger Things Thumbnail" class="thumbnail">
+        <!-- Text Content -->
+        <div class="text-container">
+            <div class="title">Stranger Things</div>
+            <div class="status">Downloading...</div>
+        </div>
+        <!-- Download Icon -->
+        <img src="gifindialog.gif" alt="Download Icon" class="download-icon">
+    </div>
+
+</body>
+
+</html>
